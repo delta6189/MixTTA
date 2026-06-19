@@ -5,11 +5,11 @@
 
 ### Core configuration ###
 GPU=${GPU:-0}
-METHOD=${METHOD:-deyo}            # tent | eata | sar | deyo | recap_plpd | LinearTCA | no_adapt
+METHOD=${METHOD:-recap_plpd}            # tent | eata | sar | deyo | recap_plpd | LinearTCA | no_adapt
 MODEL=${MODEL:-vitbase_timm}            # vitbase_timm | resnet50_gn_timm
 EXP=${EXP:-normal}                      # normal | mix_shifts | label_shifts | bs1
 SEED=${SEED:-2024}
-PLUGIN_MIXTTA=${PLUGIN_MIXTTA:-False}    # plugin_mixtta: False (baseline) | True (with MixTTA)
+PLUGIN_MIXTTA=${PLUGIN_MIXTTA:-True}    # plugin_mixtta: False (baseline) | True (with MixTTA)
 
 # LinearTCA can be used in two ways:
 #   (1) standalone           -> METHOD=LinearTCA
@@ -18,8 +18,8 @@ PLUGIN_MIXTTA=${PLUGIN_MIXTTA:-False}    # plugin_mixtta: False (baseline) | Tru
 ADD_TCA=${ADD_TCA:-False}               # False | True
 
 ### Data paths ###
-DATA=${DATA:-'/path/to/imagenet/val'}     # clean ImageNet val (EATA Fisher)
-ROOT=${ROOT:-'/path/to/ImageNet-C'}       # ImageNet-C root
+DATA=${DATA:-'/data/path/to/ImageNet-val'}     # clean ImageNet val (EATA Fisher)
+ROOT=${ROOT:-'/data/path/to/ImageNet-C'}       # ImageNet-C root
 
 ### MixTTA hyper-parameters ###
 LAYER_TYPE=${LAYER_TYPE:-LoRAFC}        # LoRAFC (low-rank) | FC (full-rank)
@@ -37,12 +37,12 @@ if [ "$MODEL" == "vitbase_timm" ]; then
     MIXTTA_TARGET_LAYERS=${MIXTTA_TARGET_LAYERS:-"0"}
     MIXTTA_TARGET_NORMS=${MIXTTA_TARGET_NORMS:-"2"}
 else # ResNet
-    TENT_TARGET_BLOCKS=${TENT_TARGET_BLOCKS:-"0 1 2 3"}
+    TENT_TARGET_BLOCKS=${TENT_TARGET_BLOCKS:-"0 1 2 3"}    # 0: Stem
     TENT_TARGET_LAYERS=${TENT_TARGET_LAYERS:-"0 1 2 3 4 5"}
     TENT_TARGET_NORMS=${TENT_TARGET_NORMS:-"1 2 3 4"}
     MIXTTA_TARGET_BLOCKS=${MIXTTA_TARGET_BLOCKS:-"0 1 2"}
     MIXTTA_TARGET_LAYERS=${MIXTTA_TARGET_LAYERS:-"0 1 2 3 4 5"}
-    MIXTTA_TARGET_NORMS=${MIXTTA_TARGET_NORMS:-"1 2 3 4"}
+    MIXTTA_TARGET_NORMS=${MIXTTA_TARGET_NORMS:-"1 2 3"}    # 4: Shorcut
 fi
 
 echo "GPU=$GPU  Method=$METHOD  Model=$MODEL  Exp=$EXP  Seed=$SEED  PluginMixTTA=$PLUGIN_MIXTTA"
