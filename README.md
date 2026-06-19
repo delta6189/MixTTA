@@ -14,7 +14,7 @@ inter-channel mixing while staying parameter-efficient. It is a **model-agnostic
 that can be attached to any normalization-based TTA method (Tent, EATA, SAR, DeYO, ReCAP).
 
 <p align="center">
-<img src="./figures/overview.png" alt="method" width="100%" align=center />
+<img src="./figures/Module_Resize.png" alt="method" width="100%" align=center />
 </p>
 
 ### Key Components
