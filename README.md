@@ -149,7 +149,7 @@ automatically in `run_exp.sh` (ViT: MixTTA on the 2nd norm of the first 5 blocks
 | `TENT_TARGET_NORMS` (`--tent_target_norms`) | `1 2` | `1 2 3 4` |
 | `MIXTTA_TARGET_BLOCKS` (`--mixtta_target_blocks`) | `0 1 2 3 4` | `0 1 2` |
 | `MIXTTA_TARGET_LAYERS` (`--mixtta_target_layers`) | `0` | `0 1 2 3 4 5` |
-| `MIXTTA_TARGET_NORMS` (`--mixtta_target_norms`) | `2` | `1 2 3 4` |
+| `MIXTTA_TARGET_NORMS` (`--mixtta_target_norms`) | `2` | `1 2 3` |
 
 > Base-method hyper-parameters (DeYO/ReCAP/SAR/EATA thresholds, etc.) are fixed to their
 > paper values as `main.py` defaults and are not exposed in `run_exp.sh`.
