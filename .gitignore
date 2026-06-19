@@ -1,0 +1,27 @@
+# Python
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+
+# IDE / editor
+.idea/
+/shelf/
+/workspace.xml
+/httpRequests/
+
+# Experiment outputs / logs
+output/
+wandb/
+ckpt/
+model_weight/
+overnight/
+*.out
+*.tmp
+run.log
+
+# Large model weights (download separately — see README "Model Weights")
+models/*.pth
+models/*.npz
+
+# Local data
+.data/
