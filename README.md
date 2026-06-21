@@ -1,4 +1,4 @@
-# MixTTA: Low-Rank Cross-Channel Mixing for Reliable Test-Time Adaptation
+# MixTTA: Low-Rank Cross-Channel Mixing for Reliable Test-Time Adaptation 
 
 This is the official repository for **MixTTA**, a lightweight plug-in module that equips
 normalization layers with a low-rank **cross-channel** transformation for Test-Time
@@ -184,5 +184,5 @@ optimizer.step()
 
 This repository is built upon [SAR](https://github.com/mr-eggplant/SAR),
 [DeYO](https://github.com/Jhyun17/DeYO),
-[ReCAP](https://openreview.net/forum?id=QwxjjaGBUo),
+[ReCAP](https://github.com/hzcar/ReCAP),
 and [LinearTCA](https://github.com/youlj109/TCA). Thanks for their excellent projects.
