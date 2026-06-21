@@ -1,4 +1,4 @@
-# MixTTA: Low-Rank Cross-Channel Mixing for Reliable Test-Time Adaptation 
+# [ECCV 2026] MixTTA: Low-Rank Cross-Channel Mixing for Reliable Test-Time Adaptation 
 
 This is the official repository for **MixTTA**, a lightweight plug-in module that equips
 normalization layers with a low-rank **cross-channel** transformation for Test-Time
