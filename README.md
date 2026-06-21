@@ -183,5 +183,6 @@ optimizer.step()
 ## Acknowledgment
 
 This repository is built upon [SAR](https://github.com/mr-eggplant/SAR),
-[DeYO](https://github.com/Jhyun17/DeYO), and
-[ReCAP](https://openreview.net/forum?id=QwxjjaGBUo). Thanks for their excellent projects.
+[DeYO](https://github.com/Jhyun17/DeYO),
+[ReCAP](https://openreview.net/forum?id=QwxjjaGBUo),
+and [LinearTCA](https://github.com/youlj109/TCA). Thanks for their excellent projects.
