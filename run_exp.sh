@@ -18,8 +18,8 @@ PLUGIN_MIXTTA=${PLUGIN_MIXTTA:-True}    # plugin_mixtta: False (baseline) | True
 ADD_TCA=${ADD_TCA:-False}               # False | True
 
 ### Data paths ###
-DATA=${DATA:-'/data/path/to/ImageNet-val'}     # clean ImageNet val (EATA Fisher)
-ROOT=${ROOT:-'/data/path/to/ImageNet-C'}       # ImageNet-C root
+DATA=${DATA:-'/data/mansoo/data/ImageNet'}   # clean ImageNet val (EATA Fisher)
+ROOT=${ROOT:-'/data/mansoo/data/ImageNet-C'}    # ImageNet-C root
 
 ### MixTTA hyper-parameters ###
 LAYER_TYPE=${LAYER_TYPE:-LoRAFC}        # LoRAFC (low-rank) | FC (full-rank)
