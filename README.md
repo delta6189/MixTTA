@@ -180,6 +180,19 @@ clear_feature_record(model)
 optimizer.step()
 ```
 
+## Citation
+
+```
+@inproceedings{jung2026mixtta,
+  title={MixTTA: Low-Rank Cross-Channel Mixing for Reliable Test-Time Adaptation},
+  author={Jung, Mansoo and Kim, Youngwook and Lee, Jungwoo},
+  booktitle={European Conference on Computer Vision},
+  pages={18--38},
+  year={2026},
+  organization={Springer}
+}
+```
+
 ## Acknowledgment
 
 This repository is built upon [SAR](https://github.com/mr-eggplant/SAR),
